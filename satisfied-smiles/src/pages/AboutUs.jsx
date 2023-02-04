@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../layouts/Navbar";
 
 export default function AboutUs() {
   return (
-    <div>AboutUs</div>
-  )
+    <>
+      <Navbar />
+    </>
+  );
 }
