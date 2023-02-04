@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../layouts/Header";
+import HowTo from "../layouts/HowTo";
 import Navbar from "../layouts/Navbar";
 
 function Homepage() {
@@ -7,6 +8,7 @@ function Homepage() {
     <>
       <Navbar />
       <Header />
+      <HowTo />
     </>
   );
 }
