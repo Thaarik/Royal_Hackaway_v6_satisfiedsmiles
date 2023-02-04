@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: 350px;
-  background-color: #91e5f6;
+  background-color: #cae9ff;
   display: flex;
 `;
 const Tagline = styled.div`
