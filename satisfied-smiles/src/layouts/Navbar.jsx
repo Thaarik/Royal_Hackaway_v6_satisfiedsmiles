@@ -14,7 +14,6 @@ const Container = styled.div`
   z-index: 10;
   background-color: #cae9ff;
   opacity: ${(props) => (props.extendNavbar ? "0.9" : "1")};
-  /* box-shadow: 0px 1px 5px #f3f0f0; */
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
