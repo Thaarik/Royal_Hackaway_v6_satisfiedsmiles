@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { mobile } from "./../responsive";
+import Button from "@mui/material/Button";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const Container = styled.div`
   transition: all 0.5s ease;
-  height: ${(props) => (props.extendNavbar ? "100vh" : "75px")};
+  height: ${(props) => (props.extendNavbar ? "100vh" : "100px")};
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
-  background-color: #91e5f6;
+  background-color: #cae9ff;
   opacity: ${(props) => (props.extendNavbar ? "0.9" : "1")};
-  box-shadow: 0px 1px 5px #f3f0f0;
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
@@ -19,42 +21,45 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const Left = styled.div`
-  flex: 1;
+const Title = styled.h2`
+  font-style: italic;
+  color: #133c55;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  margin-left: 80px;
+  ${mobile({ "justify-content": "flex-start" })}
 `;
 
-const Center = styled.div`
-  flex: 3;
+const Pages = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  ${mobile({ display: "none" })}
 `;
+
 const NavItems = styled.div`
   margin: 20px;
 `;
+
+const Span = styled.div`
+  margin: 5px;
+`;
+
 const Text = styled.p`
   font-size: ${(props) => (props.extendNavbar ? "26px" : "15px")};
   font-weight: 600;
   cursor: pointer;
   &:hover {
-    text-decoration: underline;
+    color: #386fa4;
   }
 `;
-const Right = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+
 const HamburgerButton = styled.button`
   width: 70px;
   height: 75px;
   background: none;
   border: 0px;
-  color: black;
+  color: #133c55;
   font-size: 45px;
   cursor: pointer;
   @media (min-width: 480px) {
@@ -70,9 +75,9 @@ const HamburgerExtendedContainer = styled.div`
     display: none;
   }
 `;
-const NavItemsHamb = styled.div`
+const NavItemsHB = styled.div`
   margin: 30px 10px;
-  font-size: 46px;
+  font-size: 32px;
 `;
 export default function Navbar() {
   let navigate = useNavigate();
@@ -81,24 +86,21 @@ export default function Navbar() {
     <>
       <Container extendNavbar={showLinks}>
         <Wrapper>
-          <Left>Satisfied Smiles ツ</Left>
-          <Center hamb={showLinks}>
+          <Title>Satisfied Smiles ツ</Title>
+          <Pages hamburger={showLinks}>
             <NavItems>
-              <Text onClick={() => navigate("/about-us")}>About Us</Text>
+              <Text onClick={() => navigate("/about-us")}>About</Text>
             </NavItems>
             <NavItems>
-              <Text onClick={() => navigate("/contact-us")}>Contact Us</Text>
+              <Text onClick={() => navigate("/contact-us")}>Contact</Text>
             </NavItems>
             <NavItems>
-              <Text onClick={() => navigate("/register")}>Sign Up</Text>
+              <Button variant="outlined" onClick={() => navigate("/donation")}>
+                Donate Now <Span />
+                <FavoriteBorderIcon />
+              </Button>
             </NavItems>
-            <NavItems>
-              <Text onClick={() => navigate("/login")}>Login</Text>
-            </NavItems>
-            <NavItems>
-              <Text onClick={() => navigate("/donation")}>Donate</Text>
-            </NavItems>
-          </Center>
+          </Pages>
           <HamburgerButton
             onClick={() => {
               setShowLinks((current) => !current);
@@ -109,28 +111,30 @@ export default function Navbar() {
         </Wrapper>
         {showLinks && (
           <HamburgerExtendedContainer>
-            <NavItemsHamb>
-              <Text extendNavbar={showLinks}>Products</Text>
-            </NavItemsHamb>
-            <NavItemsHamb>
+            <NavItemsHB>
               <Text
                 extendNavbar={showLinks}
                 onClick={() => navigate("/about-us")}
               >
                 About Us
               </Text>
-            </NavItemsHamb>
-            <NavItemsHamb>
+            </NavItemsHB>
+            <NavItemsHB>
               <Text
                 extendNavbar={showLinks}
                 onClick={() => navigate("/contact-us")}
               >
                 Contact Us
               </Text>
-            </NavItemsHamb>
-            <NavItemsHamb>
-              <Text extendNavbar={showLinks}>Cart</Text>
-            </NavItemsHamb>
+            </NavItemsHB>
+            <NavItemsHB>
+              <Text
+                extendNavbar={showLinks}
+                onClick={() => navigate("/donation")}
+              >
+                Donate
+              </Text>
+            </NavItemsHB>
           </HamburgerExtendedContainer>
         )}
       </Container>
