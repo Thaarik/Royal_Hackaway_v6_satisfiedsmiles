@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import HeaderImg from "../assets/images/food-donation.jpg";
 import { mobile } from "./../responsive";
