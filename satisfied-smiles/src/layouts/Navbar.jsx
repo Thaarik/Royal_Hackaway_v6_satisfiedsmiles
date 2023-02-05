@@ -8,7 +8,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 const Container = styled.div`
   transition: all 0.5s ease;
   height: ${(props) => (props.extendNavbar ? "100vh" : "100px")};
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
