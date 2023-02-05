@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../layouts/Footer";
 import Giveaway from "../layouts/GiveAway";
 import Header from "../layouts/Header";
 import HowTo from "../layouts/HowTo";
@@ -11,6 +12,7 @@ function Homepage() {
       <Header />
       <HowTo />
       <Giveaway />
+      <Footer />
     </>
   );
 }
