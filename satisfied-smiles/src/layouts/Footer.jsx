@@ -6,13 +6,12 @@ const Container = styled.div`
   background-color: #133c55;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const FooterDetails = styled.div`
   margin: 30px;
-  width: 400px;
+  width: 350px;
 `;
 
 const Title = styled.h1`
@@ -28,8 +27,6 @@ const List = styled.li`
     color: #91e5f6;
   }
 `;
-
-const EmailContainer = styled.div``;
 
 export default function Footer() {
   return (
@@ -58,11 +55,6 @@ export default function Footer() {
             <List>07xxxxxxxxx</List>
             <List>service@satisfiedsmiles.co.uk</List>
           </ul>
-        </FooterDetails>
-        <FooterDetails>
-          <EmailContainer>
-            
-          </EmailContainer>
         </FooterDetails>
       </Container>
     </>
