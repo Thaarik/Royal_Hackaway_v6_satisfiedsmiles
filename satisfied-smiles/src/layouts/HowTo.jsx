@@ -11,6 +11,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
+  color: #caf0f8;
 `;
 const Title = styled.h2`
   text-align: center;
