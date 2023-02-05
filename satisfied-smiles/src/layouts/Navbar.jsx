@@ -95,9 +95,6 @@ export default function Navbar() {
               <Text onClick={() => navigate("/about-us")}>About</Text>
             </NavItems>
             <NavItems>
-              <Text onClick={() => navigate("/contact-us")}>Contact</Text>
-            </NavItems>
-            <NavItems>
               <Button variant="outlined" onClick={() => navigate("/donation")}>
                 Donate Now <Span />
                 <FavoriteBorderIcon />
@@ -125,14 +122,6 @@ export default function Navbar() {
                 onClick={() => navigate("/about-us")}
               >
                 About
-              </Text>
-            </NavItemsHB>
-            <NavItemsHB>
-              <Text
-                extendNavbar={showLinks}
-                onClick={() => navigate("/contact-us")}
-              >
-                Contact
               </Text>
             </NavItemsHB>
             <NavItemsHB>
