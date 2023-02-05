@@ -1,9 +1,4 @@
 import React from "react";
-// import Box from "@mui/material/Box";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import Typography from "@mui/material/Typography";
-// import { CardActionArea, Container } from "@mui/material";
 import styled from "styled-components";
 const Container = styled.div`
   height: 50vh;
@@ -18,7 +13,7 @@ const Abouttext = styled.div`
   width: 80vw;
 
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   color: #fff;
 `;
