@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import howto1 from "./../assets/images/Screenshot 2023-02-05 113104.png"
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -30,10 +30,10 @@ export default function HowTo() {
             <CardMedia
               component="img"
               height="200"
-              image="/static/images/cards/contemplative-reptile.jpg"
-              alt="green iguana"
+              image={howto1}
+              alt="donation button"
             />
-            <CardContent>Click the Donate Button</CardContent>
+            <CardContent>Click the "Donate Now" Button</CardContent>
           </CardActionArea>
         </Card>
         <Card sx={{ minWidth: 275 }}>
