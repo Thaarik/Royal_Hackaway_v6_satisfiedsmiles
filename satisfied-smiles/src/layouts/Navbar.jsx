@@ -89,6 +89,9 @@ export default function Navbar() {
           <Title>Satisfied Smiles ツ</Title>
           <Pages hamburger={showLinks}>
             <NavItems>
+              <Text onClick={() => navigate("/")}>Home</Text>
+            </NavItems>
+            <NavItems>
               <Text onClick={() => navigate("/about-us")}>About</Text>
             </NavItems>
             <NavItems>
@@ -112,11 +115,16 @@ export default function Navbar() {
         {showLinks && (
           <HamburgerExtendedContainer>
             <NavItemsHB>
+              <Text extendNavbar={showLinks} onClick={() => navigate("/")}>
+                Home
+              </Text>
+            </NavItemsHB>
+            <NavItemsHB>
               <Text
                 extendNavbar={showLinks}
                 onClick={() => navigate("/about-us")}
               >
-                About Us
+                About
               </Text>
             </NavItemsHB>
             <NavItemsHB>
@@ -124,7 +132,7 @@ export default function Navbar() {
                 extendNavbar={showLinks}
                 onClick={() => navigate("/contact-us")}
               >
-                Contact Us
+                Contact
               </Text>
             </NavItemsHB>
             <NavItemsHB>
@@ -132,7 +140,7 @@ export default function Navbar() {
                 extendNavbar={showLinks}
                 onClick={() => navigate("/donation")}
               >
-                Donate
+                Donate Now
               </Text>
             </NavItemsHB>
           </HamburgerExtendedContainer>
